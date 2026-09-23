@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f0f2f5">
+  <title>Facebook</title>
+  <style>
+    :root{--blue:#0866ff;--bg:#f0f2f5;--text:#050505;--muted:#65676b;--line:#e4e6eb;--white:#fff;--shadow:0 1px 2px #0000001a}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px Arial,Helvetica,sans-serif}button,input{font:inherit}button{cursor:pointer;border:0;background:none;color:inherit}.topbar{height:56px;background:#fff;position:fixed;inset:0 0 auto;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-shadow:0 1px 4px #0002}.brand{display:flex;align-items:center;gap:8px;width:300px}.fbmark{width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-weight:bold;font-size:37px;line-height:48px;text-align:center;overflow:hidden;font-family:Arial}.search{height:40px;width:240px;background:var(--bg);border-radius:24px;display:flex;align-items:center;padding:0 14px;gap:9px;color:var(--muted)}.search input{border:0;outline:0;background:transparent;width:100%;min-width:0}.mainnav{position:absolute;left:50%;transform:translateX(-50%);height:100%;display:flex;gap:8px}.navbtn{width:112px;height:100%;font-size:23px;color:#606770;border-bottom:3px solid transparent}.navbtn.active{border-color:var(--blue);color:var(--blue)}.topright{display:flex;align-items:center;gap:8px}.circlebtn{width:40px;height:40px;border-radius:50%;background:#e4e6eb;font-size:19px;font-weight:bold}.avatar{display:grid;place-items:center;border-radius:50%;background:#d9e6ff;color:#315a9c;font-size:13px;font-weight:bold;width:40px;height:40px;flex:none}.layout{display:grid;grid-template-columns:minmax(230px,1fr) minmax(500px,680px) minmax(260px,1fr);gap:28px;padding:76px 24px 24px;max-width:1600px;margin:auto}.leftcol,.rightcol{position:sticky;top:76px;height:calc(100vh - 90px);overflow:auto}.leftcol{padding-right:4px}.shortcut{display:flex;align-items:center;gap:12px;width:100%;padding:9px 8px;border-radius:8px;text-align:left;font-weight:600}.shortcut:hover,.contact:hover{background:#e4e6eb}.shorticon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:20px;background:#dbe8ff;color:#0866ff}.leftcol hr{border:0;border-top:1px solid #ced0d4;margin:10px 0}.sectiontitle{color:var(--muted);font-weight:700;margin:16px 8px 8px}.contact{width:100%;padding:7px 8px;border-radius:8px;display:flex;align-items:center;gap:10px;text-align:left;font-weight:600}.contact .avatar{width:34px;height:34px}.online{position:relative}.online:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#31a24c;border:2px solid white;right:0;bottom:0}.feed{width:100%;max-width:680px;margin:auto}.stories{display:flex;gap:9px;overflow:hidden;margin-bottom:16px}.story{flex:1;min-width:110px;height:190px;border-radius:10px;background:linear-gradient(145deg,#315a9c,#b4d0f5);position:relative;overflow:hidden;color:white;box-shadow:var(--shadow)}.story:nth-child(2){background:linear-gradient(145deg,#7b493e,#efb39d)}.story:nth-child(3){background:linear-gradient(145deg,#466749,#bfd28b)}.story:nth-child(4){background:linear-gradient(145deg,#48316c,#c3a8e8)}.story .avatar{position:absolute;top:10px;left:10px;border:3px solid var(--blue);background:#fff;color:#315a9c}.story strong{position:absolute;bottom:12px;left:10px;font-size:13px;text-shadow:0 1px 3px #000}.card{background:#fff;border-radius:9px;box-shadow:var(--shadow);margin-bottom:16px}.composer{padding:12px 16px}.composerrow{display:flex;gap:8px;align-items:center}.composer input{height:40px;background:var(--bg);border:0;border-radius:22px;padding:0 15px;flex:1;outline:0}.composer input:hover{background:#e4e6eb}.divider{border:0;border-top:1px solid var(--line);margin:12px 0}.composeractions{display:flex}.composeractions button{flex:1;padding:8px 2px;color:var(--muted);font-weight:600;border-radius:6px}.composeractions button:hover,.postactions button:hover{background:var(--bg)}.post{padding:14px 16px 4px}.posthead{display:flex;align-items:center;gap:9px}.postwho{flex:1}.postwho strong{display:block}.postwho small{display:block;color:var(--muted);margin-top:3px}.more{font-size:20px;color:var(--muted);padding:5px 8px;border-radius:50%}.posttext{line-height:1.45;margin:12px 0}.postimage{margin:0 -16px;background:#d9e6ff;height:280px;display:grid;place-items:center;color:#fff;font-weight:bold;font-size:70px;text-shadow:0 2px 7px #0004;background:linear-gradient(135deg,#6884ad,#d3e3f5 48%,#6d92a4)}.postimage.sunset{background:linear-gradient(160deg,#585a86 5%,#ef9e7c 48%,#395b64 49%,#213c48);font-size:42px}.reactions{display:flex;justify-content:space-between;color:var(--muted);font-size:14px;padding:10px 0}.postactions{display:flex;border-top:1px solid var(--line);padding:4px 0}.postactions button{flex:1;padding:8px 0;border-radius:6px;color:var(--muted);font-weight:600}.postactions button.liked{color:var(--blue)}.righttitle{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-weight:700;padding:4px 4px 10px}.sponsored{display:flex;gap:12px;padding:8px 4px;border-radius:8px}.sponsored:hover{background:#e4e6eb}.sponsored img{width:110px;height:90px;object-fit:cover;border-radius:8px;background:#dce5f4}.sponsored strong{display:block;margin:8px 0}.sponsored small{color:var(--muted)}.rightcol hr{border:0;border-top:1px solid #ced0d4;margin:14px 0}.contactlist{display:flex;align-items:center;justify-content:space-between;padding:0 5px}.contacticons{color:var(--muted);display:flex;gap:18px;font-size:18px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#222;color:white;border-radius:8px;padding:12px 18px;box-shadow:0 4px 18px #0004;opacity:0;pointer-events:none;transition:.2s;z-index:8}.toast.show{opacity:1}.emptysearch{display:none;text-align:center;color:var(--muted);padding:24px}.emptysearch.show{display:block}
+    @media(max-width:1100px){.layout{grid-template-columns:240px minmax(450px,680px);justify-content:center}.rightcol{display:none}.brand{width:auto}.search{width:190px}}
+    @media(max-width:760px){.topbar{padding:0 10px}.brand{width:auto}.search{width:40px;padding:0;justify-content:center;background:transparent}.search input{display:none}.mainnav{position:static;transform:none;flex:1;justify-content:center;margin-left:8px;gap:0}.navbtn{width:auto;flex:1;max-width:70px;font-size:20px}.topright .circlebtn{display:none}.layout{display:block;padding:68px 0 16px}.leftcol,.rightcol{display:none}.feed{max-width:600px;padding:0 8px}.stories{margin-bottom:10px}.story{height:160px;min-width:100px}.postimage{height:230px}}
+    @media(max-width:430px){.mainnav .navbtn:nth-child(n+4){display:none}.topright{gap:2px}.topright .avatar{width:34px;height:34px}.fbmark{width:36px;height:36px;font-size:33px}.stories .story:nth-child(4){display:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="fbmark" aria-label="Facebook">f</div><label class="search"><span>⌕</span><input id="searchInput" placeholder="Search Facebook" aria-label="Search Facebook"></label></div>
+    <nav class="mainnav" aria-label="Main navigation"><button class="navbtn active" title="Home">⌂</button><button class="navbtn" title="Watch">▣</button><button class="navbtn" title="Marketplace">▤</button><button class="navbtn" title="Groups">♧</button><button class="navbtn" title="Gaming">♙</button></nav>
+    <div class="topright"><button class="circlebtn" aria-label="Menu">▦</button><button class="circlebtn" aria-label="Messenger">●</button><button class="circlebtn" aria-label="Notifications">♢</button><div class="avatar">You</div></div>
+  </header>
+  <main class="layout">
+    <aside class="leftcol" aria-label="Shortcuts">
+      <button class="shortcut"><span class="avatar">You</span> Your profile</button>
+      <button class="shortcut"><span class="shorticon">♧</span> Friends</button>
+      <button class="shortcut"><span class="shorticon">▤</span> Memories</button>
+      <button class="shortcut"><span class="shorticon">▣</span> Saved</button>
+      <button class="shortcut"><span class="shorticon">▦</span> Groups</button>
+      <button class="shortcut"><span class="shorticon">▧</span> Video</button>
+      <button class="shortcut"><span class="shorticon">⌄</span> See more</button>
+      <hr><div class="sectiontitle">Your shortcuts</div>
+      <button class="shortcut"><span class="shorticon">🎮</span> Game community</button>
+      <button class="shortcut"><span class="shorticon">📷</span> Photo lovers</button>
+      <button class="shortcut"><span class="shorticon">🎓</span> University friends</button>
+      <small style="color:#65676b;display:block;padding:16px 8px">Privacy · Terms · Advertising · Cookies · More · Meta © 2026</small>
+    </aside>
+    <section class="feed" aria-label="News Feed">
+      <div class="stories">
+        <div class="story"><div class="avatar">You</div><strong>Create story</strong></div>
+        <div class="story"><div class="avatar">AM</div><strong>Ali M.</strong></div>
+        <div class="story"><div class="avatar">SK</div><strong>Sana K.</strong></div>
+        <div class="story"><div class="avatar">ZA</div><strong>Zain A.</strong></div>
+      </div>
+      <div class="card composer">
+        <div class="composerrow"><div class="avatar">You</div><input id="postInput" placeholder="What's on your mind, You?" aria-label="Create a post"></div>
+        <hr class="divider"><div class="composeractions"><button data-action="Live video">🔴 Live video</button><button data-action="Photo/video">🖼️ Photo/video</button><button data-action="Feeling/activity">😊 Feeling/activity</button></div>
+      </div>
+      <div id="posts">
+        <article class="card post" data-search="sana khan beautiful day friends outdoors sunshine">
+          <div class="posthead"><div class="avatar">SK</div><div class="postwho"><strong>Sana Khan</strong><small>2 hrs · 🌐</small></div><button class="more" aria-label="More options">···</button></div>
+          <p class="posttext">Beautiful day to get outside and enjoy a little sunshine ☀️</p>
+          <div class="postimage" role="img" aria-label="A peaceful blue landscape">✦</div>
+          <div class="reactions"><span>👍 ❤️ 😂</span><span>24 comments · 3 shares</span></div><div class="postactions"><button class="like">👍 Like</button><button data-action="Comment">▢ Comment</button><button data-action="Share">↗ Share</button></div>
+        </article>
+        <article class="card post" data-search="ali malik coffee morning cafe">
+          <div class="posthead"><div class="avatar">AM</div><div class="postwho"><strong>Ali Malik</strong><small>5 hrs · 🌐</small></div><button class="more" aria-label="More options">···</button></div>
+          <p class="posttext">A good coffee and a slow morning. Hope everyone has a great week! ☕</p>
+          <div class="postimage sunset" role="img" aria-label="Sunset over a calm landscape">☀</div>
+          <div class="reactions"><span>👍 ❤️</span><span>12 comments</span></div><div class="postactions"><button class="like">👍 Like</button><button data-action="Comment">▢ Comment</button><button data-action="Share">↗ Share</button></div>
+        </article>
+      </div>
+      <div id="emptySearch" class="emptysearch">No posts match your search.</div>
+    </section>
+    <aside class="rightcol" aria-label="Sponsored content and contacts">
+      <div class="righttitle">Sponsored</div>
+      <div class="sponsored"><img alt="Abstract blue design" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='180'%3E%3Crect width='220' height='180' fill='%23dbeafe'/%3E%3Ccircle cx='145' cy='55' r='72' fill='%2386b6ff'/%3E%3Cpath d='M0 150 Q100 50 220 170 V180 H0' fill='%230866ff'/%3E%3C/svg%3E"><div><strong>Build something great</strong><small>example.com</small></div></div>
+      <hr><div class="contactlist"><div class="righttitle">Contacts</div><div class="contacticons"><span>⌕</span><span>···</span></div></div>
+      <button class="contact"><span class="avatar online">AM</span> Ali Malik</button><button class="contact"><span class="avatar online">SK</span> Sana Khan</button><button class="contact"><span class="avatar online">ZA</span> Zain Ahmed</button><button class="contact"><span class="avatar online">HM</span> Hira Malik</button><button class="contact"><span class="avatar online">OR</span> Omar Raza</button>
+    </aside>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    const toast=document.getElementById('toast');let toastTimer;
+    function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),1800)}
+    document.querySelectorAll('.like').forEach(button=>button.addEventListener('click',()=>{const liked=button.classList.toggle('liked');button.textContent=liked?'👍 Liked':'👍 Like'}));
+    document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>notify(button.dataset.action+' is ready in this demo.')));
+    document.querySelectorAll('.navbtn').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.navbtn').forEach(item=>item.classList.remove('active'));button.classList.add('active')}));
+    document.getElementById('postInput').addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target.value.trim()){const article=document.createElement('article');article.className='card post';article.dataset.search=event.target.value.toLowerCase();article.innerHTML='<div class="posthead"><div class="avatar">You</div><div class="postwho"><strong>You</strong><small>Just now · 🌐</small></div><button class="more" aria-label="More options">···</button></div><p class="posttext"></p><div class="reactions"><span>👍</span><span>0 comments</span></div><div class="postactions"><button class="like">👍 Like</button><button data-action="Comment">▢ Comment</button><button data-action="Share">↗ Share</button></div>';article.querySelector('.posttext').textContent=event.target.value;document.getElementById('posts').prepend(article);article.querySelector('.like').addEventListener('click',e=>{const liked=e.currentTarget.classList.toggle('liked');e.currentTarget.textContent=liked?'👍 Liked':'👍 Like'});article.querySelectorAll('[data-action]').forEach(btn=>btn.addEventListener('click',()=>notify(btn.dataset.action+' is ready in this demo.')));event.target.value='';notify('Your post was added.')}});
+    document.getElementById('searchInput').addEventListener('input',event=>{const term=event.target.value.trim().toLowerCase();let visible=0;document.querySelectorAll('#posts .post').forEach(post=>{const match=!term||post.dataset.search.includes(term)||post.innerText.toLowerCase().includes(term);post.style.display=match?'':'none';if(match)visible++});document.getElementById('emptySearch').classList.toggle('show',visible===0)});
+  </script>
+</body>
+</html>
